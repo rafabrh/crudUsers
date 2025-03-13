@@ -19,5 +19,17 @@ public class User {
     private Long id;
     private String name;
 
-    public User(String name) {this.name = name;}
+    public User(String name) {
+        this.name = name;
+    }
+
+
+
+
 }
+
+//public void atualizarInfomacoes(DadosAtualizarUser UserDto){
+ //   if (UserDto.name() != null) {
+ //       this.name = User.name();
+ //   }
+
