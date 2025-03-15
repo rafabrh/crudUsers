@@ -45,7 +45,7 @@ public class Controller {
     @PutMapping("/atualizar/{id}")
     @Transactional
     public User update(@PathVariable Long id, @RequestBody @Validated UserDto userDto) {
-        User user = userRepository.findById(id).orElseThrow(() -> new IdDontExistException("User with ID" + id + "not found"));
+        User user = userRepository.findById(id).orElseThrow(() -> new IdDontExistException("User with ID:" + id + " not found"));
         user.setName(userDto.name());
         return user;
     }
